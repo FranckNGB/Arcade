@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="cpp_arcade"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/j-f/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/j-f/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/j-f/cpp_arcade/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_arcade">
+				<Option output="/home/j-f/cpp_arcade/cmake-build-debug/cpp_arcade" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/j-f/cpp_arcade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/j-f/cpp_arcade/inc"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Games/Nibbler"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Games/Pacman"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Graphics/Vulkan"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_arcade"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="cpp_arcade/fast">
+				<Option output="/home/j-f/cpp_arcade/cmake-build-debug/cpp_arcade" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/j-f/cpp_arcade/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/j-f/cpp_arcade/inc"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Games/Nibbler"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Games/Pacman"/>
+					<Add directory="/home/j-f/cpp_arcade/lib/Graphics/Vulkan"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 cpp_arcade/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/j-f/cpp_arcade/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Alias.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Arcade.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/ArcadeException.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Core.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/GameLoader.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/IDisplay.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/IGame.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/IPlayer.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/IScene.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Loader.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Menu.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Ncurses.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Sdl2.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Sfml.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Texture.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/Time.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/inc/utils.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Nibbler/Extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Nibbler/Nibbler.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Nibbler/Nibbler.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Nibbler/NibblerScene.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Nibbler/NibblerScene.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/Extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/MoveGosht.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/Pacman.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/Pacman.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/PacmanScene.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Games/Pacman/PacmanScene.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Ncurses/Ncurses.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Ncurses/extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Sdl2/Sdl2.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Sdl2/extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Sfml/Sfml.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Sfml/extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Vulkan/Vulkan.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Vulkan/Vulkan.hpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/lib/Graphics/Vulkan/extern.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/Arcade.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/Core.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/GameLoader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/Loader.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/Menu.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/main.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/src/utils.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/ArcadeTest.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/CoreTest.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/GraphicsSdl2Test.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/GraphicsSfmlTest.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/LoaderTest.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/tests/Menu.cpp">
+			<Option target="cpp_arcade"/>
+		</Unit>
+		<Unit filename="/home/j-f/cpp_arcade/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
