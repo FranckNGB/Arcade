@@ -1,0 +1,61 @@
+cmake_minimum_required(VERSION 3.10)
+project(cpp_arcade)
+
+set(CMAKE_CXX_STANDARD 11)
+
+include_directories(inc)
+include_directories(lib/Games/Nibbler)
+include_directories(lib/Games/Pacman)
+include_directories(lib/Graphics/Vulkan)
+
+add_executable(cpp_arcade
+        inc/Alias.hpp
+        inc/Arcade.hpp
+        inc/ArcadeException.hpp
+        inc/Core.hpp
+        inc/GameLoader.hpp
+        inc/IDisplay.hpp
+        inc/IGame.hpp
+        inc/IPlayer.hpp
+        inc/IScene.hpp
+        inc/Loader.hpp
+        inc/Menu.hpp
+        inc/Ncurses.hpp
+        inc/Sdl2.hpp
+        inc/Sfml.hpp
+        inc/Texture.hpp
+        inc/Time.hpp
+        inc/utils.hpp
+        lib/Games/Nibbler/Extern.cpp
+        lib/Games/Nibbler/Nibbler.cpp
+        lib/Games/Nibbler/Nibbler.hpp
+        lib/Games/Nibbler/NibblerScene.cpp
+        lib/Games/Nibbler/NibblerScene.hpp
+        lib/Games/Pacman/Extern.cpp
+        lib/Games/Pacman/MoveGosht.cpp
+        lib/Games/Pacman/Pacman.cpp
+        lib/Games/Pacman/Pacman.hpp
+        lib/Games/Pacman/PacmanScene.cpp
+        lib/Games/Pacman/PacmanScene.hpp
+        lib/Graphics/Ncurses/extern.cpp
+        lib/Graphics/Ncurses/Ncurses.cpp
+        lib/Graphics/Sdl2/extern.cpp
+        lib/Graphics/Sdl2/Sdl2.cpp
+        lib/Graphics/Sfml/extern.cpp
+        lib/Graphics/Sfml/Sfml.cpp
+        lib/Graphics/Vulkan/extern.cpp
+        lib/Graphics/Vulkan/Vulkan.cpp
+        lib/Graphics/Vulkan/Vulkan.hpp
+        src/Arcade.cpp
+        src/Core.cpp
+        src/GameLoader.cpp
+        src/Loader.cpp
+        src/main.cpp
+        src/Menu.cpp
+        src/utils.cpp
+        tests/ArcadeTest.cpp
+        tests/CoreTest.cpp
+        tests/GraphicsSdl2Test.cpp
+        tests/GraphicsSfmlTest.cpp
+        tests/LoaderTest.cpp
+        tests/Menu.cpp)
