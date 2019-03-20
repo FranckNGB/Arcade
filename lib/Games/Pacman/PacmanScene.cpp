@@ -21,6 +21,32 @@ void    PacmanScene::print_map()
 	std::cout<<"*******************************************************"<<std::endl;
 }
 
+void    PacmanScene::createMap(void)
+{
+	pacmanMap.resize(HEIGHT, std::vector<char>(WIDTH));
+	pacmanMap = {
+			{'\n','k','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','m'},
+			{'\n','|','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','|'},
+			{'\n','|','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','|'},
+			{'\n','|','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','|'},
+			{'\n','|','o','o','*','o','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','o','*','o','o','|'},
+			{'\n','|','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','|'},
+			{'\n','|','o','*','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','*','o','|'},
+			{'\n','|','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','|'},
+			{'\n','|','o','*','o','o','*','*','o','*','*','*',' ',' ',' ','*','*','*','o','o','*','*','o','*','o','|'},
+			{'\n','|','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','|'},
+			{'\n','|','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','|'},
+			{'\n','|','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','|'},
+			{'\n','|','o','*','o','o','*','*','o','*','*','*','*','*','*','*','*','*','o','o','*','*','o','*','o','|'},
+			{'\n','|','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','|'},
+			{'\n','|','o','*','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','*','o','|'},
+			{'\n','|','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','|'},
+			{'\n','|','o','o','*','o','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','o','*','o','o','|'},
+			{'\n','|','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','|'},
+			{'\n','|','o','o','*','o','o','o','o','o','o',' ','o','o','o','o','o','o','o','o','o','o','*','o','o','|'},
+			{'\n','l','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','-','n'}};
+}
+
 PacmanScene::PacmanScene() : pacmanMap(WIDTH, std::vector<char>(HEIGHT))
 {
 	size_t  x = 0;
@@ -40,15 +66,29 @@ PacmanScene::PacmanScene() : pacmanMap(WIDTH, std::vector<char>(HEIGHT))
 		x = 0;
 		for (auto const &block : line) {
 			if (block == 'k')
-				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/000.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/003.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+			else if (block == 'l')
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/021.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+			else if (block == 'm')
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/005.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+			else if (block == 'n')
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/023.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+			else if (block == '-')
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/008.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+			else if (block == '|')
+				PacmanTexture.insert({"wall" + std::to_string(y) + std::to_string(x), (Texture){"./res/Wall/Default/016.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
 			else if (block == 'G')
-				PacmanTexture.insert({"player", {"./res/pacman_right.jpg", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+				PacmanTexture.insert({"player", {"./res/PacMan/Default/000.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
 			else if (block == 'o')
-				PacmanTexture.insert({"food" + std::to_string(y) + std::to_string(x), (Texture){"./res/food_pacman.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+				PacmanTexture.insert({"food" + std::to_string(y) + std::to_string(x), (Texture){"./res/Food/Dot/Default/000.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
 			else if (block == 'B')
-				PacmanTexture.insert({"gosht2", {"./res/pink.jpg", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+				PacmanTexture.insert({"gosht2", {"./res/Ghost/Inky0/000.png", ' ',  true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
 			else if (block == 'C')
-				PacmanTexture.insert({"gosht3", {"./res/pink.jpg", ' ', true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+				PacmanTexture.insert({"gosht3", {"./res/Ghost/Blinky0/000.png", ' ', true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+            else if (block == 'P')
+                PacmanTexture.insert({"gosht4", {"./res/Ghost/Pinky0/000.png", ' ', true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
+            else if (block == 'Y')
+                PacmanTexture.insert({"gosht5", {"./res/Ghost/Clyde90/000.png", ' ', true, true, {(int)(x * WIDTH_TEXTURE), (int)(y * HEIGHT_TEXTURE)}}});
 			x = x + 1;
 		}
 		y = y + 1;
@@ -62,10 +102,16 @@ void    PacmanScene::SetCharacters(void)
 	gosht2.x = 9;
 	gosht2.y = 13;
 	gosht3.x = 10;
-	gosht3.y = 12;
+	gosht3.y = 14;
+	gosht4.x = 9;
+	gosht4.y = 14;
+	gosht5.x = 10;
+	gosht5.y = 13;
 	pacmanMap[gosht2.x][gosht2.y] = 'B';
 	pacmanMap[gosht3.x][gosht3.y] = 'C';
-	pacmanMap[player.x][player.y] = 'G';
+    pacmanMap[gosht4.x][gosht4.y] = 'P';
+    pacmanMap[gosht5.x][gosht5.y] = 'Y';
+    pacmanMap[player.x][player.y] = 'G';
 }
 
 std::map<std::string, Texture>  PacmanScene::getTexture() const
@@ -94,7 +140,7 @@ void    PacmanScene::sceneEvent(IDisplay *display)
 		}
 		Move_left();
 		PacmanTexture.erase("player");
-		PacmanTexture.insert({"player", {"./res/pacman_left.jpg", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
+		PacmanTexture.insert({"player", {"./res/PacMan/A180/000.png", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
 	}
 	if (display->GetKey(arcade::KEYBOARD, arcade::RIGHT)) {
 		way = 1;
@@ -104,7 +150,7 @@ void    PacmanScene::sceneEvent(IDisplay *display)
 		}
 		Move_right();
 		PacmanTexture.erase("player");
-		PacmanTexture.insert({"player", {"./res/pacman_right.jpg", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
+		PacmanTexture.insert({"player", {"./res/PacMan/A0/000.png", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
 	}
 	if (display->GetKey(arcade::KEYBOARD, arcade::UP)) {
 		way = 2;
@@ -113,13 +159,13 @@ void    PacmanScene::sceneEvent(IDisplay *display)
 		}
 		Move_up();
 		PacmanTexture.erase("player");
-		PacmanTexture.insert({"player", {"./res/pacman_up.jpg", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
+		PacmanTexture.insert({"player", {"./res/PacMan/A270/000.png", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
 	}
 	if (display->GetKey(arcade::KEYBOARD, arcade::DOWN)) {
 		way = 3;
 		Move_down();
 		PacmanTexture.erase("player");
-		PacmanTexture.insert({"player", {"./res/pacman_down.jpg", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
+		PacmanTexture.insert({"player", {"./res/PacMan/A90/000.png", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
 	}
 }
 
@@ -144,7 +190,7 @@ void    PacmanScene::Move_right(void)
 		player.y = 13;
 		pacmanMap[player.x][player.y] = 'G';
         PacmanTexture.erase("player");
-        PacmanTexture.insert({"player", {"./res/pacman_right.jpg", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
+        PacmanTexture.insert({"player", {"./res/PacMan/A0/000.png", ' ',  true, true, {(int)(player.y * WIDTH_TEXTURE), (int)(player.x * HEIGHT_TEXTURE)}}});
 	}
 	if (nbr_food == 0) {
 		PacmanText.insert({"lost", {"You Won", ' ', false, true, {300, 280}}});
@@ -261,7 +307,7 @@ int PacmanScene::get_nbrfood(void)
 
 void    PacmanScene::compute(void)
 {
-	long now = getCurrentTime();
+	/*long now = getCurrentTime();
 
 	if (now - currentTime > 250) {
 		GoshtMove2();
@@ -281,33 +327,7 @@ void    PacmanScene::compute(void)
 		}
 		//print_map();
 		currentTime = now;
-	}
-}
-
-void    PacmanScene::createMap(void)
-{
-	pacmanMap.resize(HEIGHT, std::vector<char>(WIDTH));
-	pacmanMap = {
-	        {'\n','k','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','m'},
-	        {'\n','*','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','*'},
-	        {'\n','*','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','*'},
-	        {'\n','*','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','*'},
-	        {'\n','*','o','o','*','o','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','o','*','o','o','*'},
-	        {'\n','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*'},
-	        {'\n','*','o','*','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','*','o','*'},
-	        {'\n','*','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','*'},
-	        {'\n','*','o','*','o','o','*','*','o','*','*','*',' ',' ',' ','*','*','*','o','o','*','*','o','*','o','*'},
-	        {'\n','*','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','*'},
-	        {'\n','*','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','*'},
-	        {'\n','*','o','o','o','o','o','o','o','*',' ',' ',' ',' ',' ',' ',' ','*','o','o','o','o','o','o','o','*'},
-	        {'\n','*','o','*','o','o','*','*','o','*','*','*','*','*','*','*','*','*','o','o','*','*','o','*','o','*'},
-	        {'\n','*','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','*'},
-	        {'\n','*','o','*','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','*','o','*'},
-	        {'\n','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*'},
-	        {'\n','*','o','o','*','o','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','o','*','o','o','*'},
-	        {'\n','*','o','o','*','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','o','*','o','o','*'},
-	        {'\n','*','o','o','*','o','o','o','o','o','o',' ','o','o','o','o','o','o','o','o','o','o','*','o','o','*'},
-	        {'\n','l','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','*','n'}};
+	}*/
 }
 
 std::vector<std::vector<char>>  PacmanScene::getMap() const
